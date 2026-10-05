@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Legg til dette for å tvinge alt til å holde seg innenfor skjermen */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
