@@ -87,7 +87,16 @@ Du kan installere appen direkte på din Android-enhet på to enkle måter:
 6. Velg **«Installer app»** eller **«Legg til på startskjermen»**.
 7. Appen installeres på telefonen og vises i app-skuffen på lik linje med vanlige Android-apper. Den vil nå fungere **100 % uten internett**!
 
-### Metode B: Gratis publisering (Vercel / Netlify / GitHub Pages / Cloudflare Pages)
+### Metode B: Publisering via GitHub Pages (Allerede konfigurert!)
+Repositoryet har en ferdig konfigurert GitHub Actions-arbeidsflyt (`.github/workflows/deploy.yml`):
+1. Gå til repositoryet ditt: **https://github.com/Dontcallmeollie/Ukemeny**
+2. Gå til **Settings** -> **Pages**.
+3. Under **Build and deployment** > **Source**, velg **GitHub Actions**.
+4. Hver gang det pushes til `main`, bygges og publiseres appen automatisk til:
+   👉 **`https://dontcallmeollie.github.io/Ukemeny/`**
+5. Åpne denne lenken på Android-telefonen din i Chrome, og trykk **«Installer app»**!
+
+### Metode C: Manuell distribusjon (Vercel / Netlify / Cloudflare Pages)
 Siden appen er 100 % klientside uten backend, kan `dist/`-mappen publiseres direkte:
 ```bash
 # Bygg appen
@@ -96,7 +105,6 @@ npm run build
 # Eksempel med Vercel CLI (eller dra dist/-mappen inn i Netlify Drop):
 npx vercel deploy --prod ./dist
 ```
-Når du åpner URL-en i Android Chrome vil telefonen automatisk vise et **«Installer app»**-banner nederst på skjermen.
 
 ---
 
